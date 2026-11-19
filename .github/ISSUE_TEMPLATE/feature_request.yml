@@ -1,0 +1,19 @@
+name: Feature Request
+description: Suggest a feature or improvement for Moordeck
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Feature Summary
+      description: Describe the capability or workflow improvement you need.
+    validations:
+      required: true
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use Case
+      description: Explain how you use Moordeck (desktop UI, mdk CLI, Local API, Playwright/Puppeteer, or team sync).
+    validations:
+      required: true

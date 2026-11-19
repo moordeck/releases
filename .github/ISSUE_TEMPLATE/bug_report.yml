@@ -1,0 +1,42 @@
+name: Bug Report
+description: Report a bug in Moordeck Desktop, mdk CLI, or moordeck-chromium kernel
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: input
+    id: client_version
+    attributes:
+      label: Moordeck Client Version
+      placeholder: "e.g. 0.1.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      options:
+        - macOS (Apple Silicon / arm64)
+        - Linux (x64)
+    validations:
+      required: true
+  - type: input
+    id: kernel_version
+    attributes:
+      label: Browser Kernel Version
+      placeholder: "e.g. moordeck-chromium 155.0.8059.39 (mc-155-v1)"
+    validations:
+      required: false
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the issue, expected behavior, and exact steps to reproduce.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs or Diagnostics
+      description: Paste any non-sensitive error output from the UI, Local API, or mdk CLI. Remove proxy credentials and tokens before posting.
+    validations:
+      required: false
