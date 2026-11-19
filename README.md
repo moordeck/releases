@@ -1,6 +1,6 @@
 # Moordeck Releases
 
-Official distribution mirror, SHA-256 verification sums, release notes, and public issue tracker for **Moordeck** — a local-first anti-detect fingerprint browser and standard Local API engine.
+Official signed desktop installer mirrors, SHA-256 verification sums, release notes, and public issue tracker for **Moordeck** — a local-first anti-detect fingerprint browser and standard Local API engine.
 
 **Moordeck** 官方安装包分发镜像、SHA-256 校验清单、版本更新日志与公开问题反馈仓库。
 
@@ -10,9 +10,10 @@ Official distribution mirror, SHA-256 verification sums, release notes, and publ
 
 | Channel / 渠道 | Entry / 地址 | Notes / 说明 |
 | :--- | :--- | :--- |
-| **Primary CDN (Recommended)** | [moordeck.com/download](https://moordeck.com/download) | Served from `https://dl.moordeck.com` for desktop downloads, auto-updates (`tauri-plugin-updater`), and on-demand `moordeck-chromium` kernel downloads |
+| **Primary Download Page** | [moordeck.com/download](https://moordeck.com/download) | macOS Apple Silicon DMG, Linux x86_64 headless runner, and on-demand signed anti-detect Chromium kernels |
 | **GitHub Releases Mirror** | [github.com/moordeck/releases/releases](https://github.com/moordeck/releases/releases) | Signed & notarized client archives with `SHA256SUMS.txt` |
 | **Homebrew Cask (macOS)** | `brew install --cask moordeck/tap/moordeck` | Maintained in [moordeck/homebrew-tap](https://github.com/moordeck/homebrew-tap) |
+| **Public Documentation** | [moordeck/docs](https://github.com/moordeck/docs) | Local API, `mdk` CLI, diagnostic methodology, and Agent Skill |
 
 ---
 
@@ -32,10 +33,19 @@ Each release includes `SHA256SUMS.txt`. Verify downloaded installers locally:
 shasum -a 256 -c SHA256SUMS.txt
 ```
 
-### 3. Chromium Kernel Manifest (`Ed25519`)
-Managed `moordeck-chromium` kernel manifests are verified with `Ed25519` (`keyId: cc3a76fac7c5`):
-- Public manifest endpoint: `https://moordeck.com/api/v1/releases/kernels/manifest.json`
-- Client latest endpoint: `https://moordeck.com/api/v1/releases/client/latest.json`
+### 3. Release & Signed Kernel Manifests
+Live release metadata and cryptographic verification manifests:
+- Client latest manifest: `https://moordeck.com/api/v1/releases/client/latest.json`
+- Signed anti-detect Chromium kernel manifest: `https://moordeck.com/api/v1/releases/kernels/manifest.json`
+
+---
+
+## Diagnostics & Resources / 在线检测与文档
+
+- **70-Vector Fingerprint Check**: <https://moordeck.com/check>
+- **Proxy IP Purity Inspector**: <https://moordeck.com/ip>
+- **AI & Claude Environment Check**: <https://moordeck.com/ai-check>
+- **Agent Discovery**: <https://moordeck.com/llms.txt> · <https://moordeck.com/mcp>
 
 ---
 
